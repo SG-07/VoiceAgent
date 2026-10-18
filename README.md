@@ -41,3 +41,12 @@ npm start
 ```
 
 Supabase credentials should be supplied through environment variables when the database integration is wired in. Do not commit `.env` files.
+
+For frontend Supabase Auth, copy `frontend/.env.example` to `frontend/.env.local` and set:
+
+```text
+VITE_SUPABASE_URL=your-supabase-project-url
+VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+The frontend signup and login pages use Supabase email/password authentication. Configure email confirmation in the Supabase dashboard according to the desired signup flow.
